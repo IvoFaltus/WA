@@ -110,10 +110,34 @@ body {
     right: 100px;
   }
 }
+@media (width <= 1500px) {
+  .photo {
+    right: 100px;
+  }
+  .title {
+    width: 600px;
+    font-size: 40px;
+    top: 100px;
+  }
+  .info{top: 250px;}
+
+  .photo{
+
+    right: 150px;
+    top: 250px;
+  }
+}
+
+
+
+
+
 @media (width <= 1100px) {
   .photo {
-    right: 40px;
+    right: 10px;
+    top: 130px;
   }
+  
 }
 
 @media (width <= 1024px) {
@@ -182,6 +206,7 @@ body {
   .photo {
     
     top: 900px;
+    
   }
 }
 
@@ -196,6 +221,7 @@ body {
     width: 100%;
   }
   .photo {
+    
     top: 1100px;
     left: 50%;
     transform: translate(-50%, -50%);
