@@ -7,42 +7,85 @@
     <link rel="stylesheet" href="contact.css" />
   </head>
   <body>
-    <div class="navbar">
+    <div class="navbar collapsed">
+      <button class="btn HomeBtn">Home</button>
       <button class="btn Clientelebtn">Clientele</button>
       <button class="btn Projectsbtn">Projects</button>
       <button class="btn Contactbtn">Contact</button>
       <button class="btn Firmsbtn">Firms</button>
       <button class="btn Aboutbtn">About</button>
     </div>
+    <button class="arrowbtn btn">
+      <img src="union-1.svg" alt="" class="icon" />
+    </button>
 
-    <div class="title">Contact</div>
-
-    <div class="info">
-      <p>
-        Email: faltus2@spsejecna.cz <br>
-        Tel.: +420 731317715 <br>
     
-        IČO: 1214125151 <br>
-      </p>
+    <div class="page">
+      <div class="title">Contact</div>
+
+      <div class="info">
+        <p>
+          Email: faltus2@spsejecna.cz <br />
+          Tel.: +420 731317715 <br />
+
+          IČO: 1214125151 <br />
+        </p>
+      </div>
+
+      
+        <form action="" method="post">
+          <label class="header">Contact us</label> <br />
+          <label class="msgLabel" for="name">Message:</label><br />
+          <textarea type="text" class="messageText" name="message"></textarea
+          ><br />
+          <label class="emailLabel" for="message">Your Email:</label><br />
+          <input type="text" id="message" name="message" /><br />
+          <input type="submit" value="Submit" />
+        </form>
+      
+
+      <script>
+        const redirectTo = (page) => {
+          pageDiv.classList.add("pageCollapsed");
+
+          setTimeout(() => {
+            window.location.href = page;
+          }, 500);
+        };
+        const pageDiv = document.querySelector(".page");
+        const clienteleBtn = document.querySelector(".Clientelebtn");
+        const projectsBtn = document.querySelector(".Projectsbtn");
+        const contactBtn = document.querySelector(".Contactbtn");
+        const firmsBtn = document.querySelector(".Firmsbtn");
+        const aboutBtn = document.querySelector(".Aboutbtn");
+        const arrowBtn = document.querySelector(".arrowbtn");
+        const homeBtn = document.querySelector(".HomeBtn");
+
+        arrowBtn.addEventListener("click", () => {
+          const navbar = document.querySelector(".navbar");
+
+          navbar.classList.toggle("opened");
+        });
+
+        homeBtn.addEventListener("click", () => {
+          redirectTo("index.html");
+        });
+        clienteleBtn.addEventListener("click", () => {
+          redirectTo("clientele.html");
+        });
+        projectsBtn.addEventListener("click", () => {
+          redirectTo("projects.html");
+        });
+        contactBtn.addEventListener("click", () => {
+          redirectTo("contact.html");
+        });
+        firmsBtn.addEventListener("click", () => {
+          redirectTo("firms.html");
+        });
+        aboutBtn.addEventListener("click", () => {
+          redirectTo("about.html");
+        });
+      </script>
     </div>
-
-
-
-    <div class="formDiv">
-    <form action="" method="post">
-
-        <label class="header">Contact us</label> <br>
-        <label class="msgLabel" for="name">Message:</label><br>
-        <textarea type="text" class="messageText" name="message"></textarea><br>
-        <label class="emailLabel" for="message">Your Email:</label><br>
-        <input type="text" id="message" name="message"><br>
-        <input type="submit" value="Submit" />
-
-
-    </form>
-    </div>
-
-
-
   </body>
 </html>

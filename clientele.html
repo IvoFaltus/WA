@@ -1,56 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="clientele.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    
-<style>
-body {
-    font-family: 'Inter';font-size: 22px;
-    }
-
+    <link rel="stylesheet" href="clientele.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: "Inter";
+        font-size: 22px;
+      }
     </style>
 
+    <div class="navbar collapsed">
+      <button class="btn HomeBtn">Home</button>
+      <button class="btn Clientelebtn">Clientele</button>
+      <button class="btn Projectsbtn">Projects</button>
+      <button class="btn Contactbtn">Contact</button>
+      <button class="btn Firmsbtn">Firms</button>
+      <button class="btn Aboutbtn">About</button>
+    </div>
+    <button class="arrowbtn btn">
+      <img src="union-1.svg" alt="" class="icon" />
+    </button>
 
-</head>
-<body>
-    
-<div class="navbar">
-<button class="btn Clientelebtn">Clientele</button>
-<button class="btn Projectsbtn">Projects</button>
-<button class="btn Contactbtn">Contact</button>
-<button class="btn Firmsbtn">Firms</button>
-<button class="btn Aboutbtn">About</button>
+    <div class="page">
+      <h1 class="title">My Clientele</h1>
+      <div class="text1">
+        <p>
+          I've partnered with businesses across
+          <b>technology, e-commerce, </b> and <br />
+          creative industries to deliver reliable, reusable digital solutions.
+          My clients trust <br />
+          us for <b>clean design, efficient code, </b>and long-term support.
+        </p>
+      </div>
 
+      <div class="text2">
+        <p>
+          <b>Trusted by: </b> <br />
+          Startups, agencies, and independent creators who value <br />quality
+          and innovation.
+        </p>
+      </div>
+    </div>
+    <script>
+      const redirectTo = (page) => {
+        pageDiv.classList.add("pageCollapsed");
 
+        setTimeout(() => {
+          window.location.href = page;
+        }, 500);
+      };
+      const pageDiv = document.querySelector(".page");
+      const clienteleBtn = document.querySelector(".Clientelebtn");
+      const projectsBtn = document.querySelector(".Projectsbtn");
+      const contactBtn = document.querySelector(".Contactbtn");
+      const firmsBtn = document.querySelector(".Firmsbtn");
+      const aboutBtn = document.querySelector(".Aboutbtn");
+      const arrowBtn = document.querySelector(".arrowbtn");
+      const homeBtn = document.querySelector(".HomeBtn");
 
-</div>
+      arrowBtn.addEventListener("click", () => {
+        const navbar = document.querySelector(".navbar");
 
-<h1 class="title">My Clientele</h1>
-<div class="text1">
-<p>
-I've partnered with businesses across <b>technology, e-commerce, </b>
-and <br> creative industries to deliver reliable, reusable digital
-solutions. My clients trust <br> us for <b>clean design, 
-efficient code, </b>and long-term support.
-</p>
-</div>
+        navbar.classList.toggle("opened");
+      });
 
-
-<div class="text2">
-    <p>
-<b>Trusted by: </b> <br>
-Startups, agencies,
-and independent creators who value <br>quality and innovation.
-</p>
-</div>
-
-
-
-</body>
+      homeBtn.addEventListener("click", () => {
+        redirectTo("index.html");
+      });
+      clienteleBtn.addEventListener("click", () => {
+        redirectTo("clientele.html");
+      });
+      projectsBtn.addEventListener("click", () => {
+        redirectTo("projects.html");
+      });
+      contactBtn.addEventListener("click", () => {
+        redirectTo("contact.html");
+      });
+      firmsBtn.addEventListener("click", () => {
+        redirectTo("firms.html");
+      });
+      aboutBtn.addEventListener("click", () => {
+        redirectTo("about.html");
+      });
+    </script>
+  </body>
 </html>
