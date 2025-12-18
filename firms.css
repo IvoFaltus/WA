@@ -77,9 +77,8 @@ body {
 }
 
 .navbar {
-  z-index: 50;
   position: fixed;
-
+  z-index: 30;
   width: 800px;
   height: 80px;
   right: 0px;
@@ -184,17 +183,17 @@ padding: 20px;
 }
 
 @media (width <=700px) {
-  .navbar.opened ~ .page {
-    padding-top: 300px;
+  .navbar.opened + .arrowbtn + .page {
+    margin-top: 300px;
 }
-
   .collapsed {
     display: none;
   }
- .arrowbtn {
+  .arrowbtn {
     display: flex;
     align-items: center;
     justify-content: center;
+    left: 90%;
   }
   .opened {
     width: 100%;
@@ -206,10 +205,13 @@ padding: 20px;
   }
   .btn{
     height: 40px;
-    margin: 10px;
   
   }
-
+.arrowbtn{
+    z-index: 50;
+    height: 40px;
+    left: 90%;
+  }
   .title{
     position: relative;
     width: 600px;
