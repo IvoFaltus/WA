@@ -50,7 +50,7 @@ body {
 
 .navbar {
   z-index: 50;
-  position: fixed;
+  position: absolute;
   right: 0;
   width: 800px;
   height: 80px;
@@ -212,7 +212,7 @@ input[type="submit"] {
 
 
 .arrowbtn{
-  position: fixed;
+  position: absolute;
   right: 10px;
   top: 10px;
   width: 60px;

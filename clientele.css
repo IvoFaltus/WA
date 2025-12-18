@@ -71,7 +71,7 @@ body {
 }
 
 .navbar {
-  position: fixed;
+  position: absolute;
 z-index: 50;
   width: 800px;
   height: 80px;

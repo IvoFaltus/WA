@@ -77,11 +77,12 @@ body {
 }
 
 .navbar {
-  position: fixed;
+  position: absolute;
   z-index: 30;
   width: 800px;
   height: 80px;
   right: 0px;
+  top: 0;
   background-color: var(--darker-grey);
 
   display: flex;
@@ -164,7 +165,7 @@ padding: 20px;
 }
 
 @media (width <= 800px) {
-  .navbar {
+.navbar {
     border-radius: 0px;
     width: 100%;
   }
@@ -172,7 +173,7 @@ padding: 20px;
 
   .text1 {
     top: 500px;
-    height: 400px;
+    height: 300px;
     width: 600px;
     
   }
