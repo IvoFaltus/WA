@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="index.css" />
-    <style></style>
+    <!-- ONE shared CSS file -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+
+  <body class="page-index">
     <div class="navbar collapsed">
       <button class="btn HomeBtn">Home</button>
       <button class="btn Clientelebtn">Clientele</button>
@@ -25,6 +27,7 @@
     <button class="arrowbtn btn">
       <img src="union-1.svg" alt="" class="icon" />
     </button>
+
     <div class="page">
       <div class="title">Junior Fullstack developer</div>
 
@@ -35,74 +38,46 @@
 
       <div class="desc">
         <div class="text">
-          Building <b>responsive web </b> apps with <br />
+          Building <b>responsive web</b> apps with <br />
           Python-based backends and modern <br />
           JS frameworks. Skilled in <b>API design</b>,<br />
           UI implementation, and database integration. <br />
-          Focused on <b>clean code and scalable architecture. </b><br />
+          Focused on <b>clean code and scalable architecture.</b><br />
         </div>
       </div>
 
       <div class="photo"></div>
-      
-      <script>
-        const clienteleBtn = document.querySelector(".Clientelebtn");
-        const projectsBtn = document.querySelector(".Projectsbtn");
-        const contactBtn = document.querySelector(".Contactbtn");
-        const firmsBtn = document.querySelector(".Firmsbtn");
-        const aboutBtn = document.querySelector(".Aboutbtn");
-        const arrowBtn = document.querySelector(".arrowbtn");
-        const homeBtn = document.querySelector(".HomeBtn");
-        const pageDiv = document.querySelector(".page");
-
-        arrowBtn.addEventListener("click", () => {
-          const navbar = document.querySelector(".navbar");
-
-          navbar.classList.toggle("opened");
-
-          if (navbar.classList.contains("opened")) {
-            const photo = document.querySelector(".photo");
-            photo.style.top = photo.offsetTop + 300 + "px";
-          } else {
-            const photo = document.querySelector(".photo");
-            photo.style.top = "700px";
-          }
-        });
-
-
-
-        const redirectTo = (page) => {
-          pageDiv.classList.add("pageCollapsed");
-
-          setTimeout(() => {
-            window.location.href = page;
-          }, 500);
-        };
-
-
-
-
-
-
-        homeBtn.addEventListener("click", () => {
-          redirectTo("index.html");
-        });
-        clienteleBtn.addEventListener("click", () => {
-          redirectTo("clientele.html");
-        });
-        projectsBtn.addEventListener("click", () => {
-          redirectTo("projects.html");
-        });
-        contactBtn.addEventListener("click", () => {
-          redirectTo("contact.html");
-        });
-        firmsBtn.addEventListener("click", () => {
-          redirectTo("firms.html");
-        });
-        aboutBtn.addEventListener("click", () => {
-          redirectTo("about.html");
-        });
-      </script>
     </div>
+
+    <script>
+      const clienteleBtn = document.querySelector(".Clientelebtn");
+      const projectsBtn = document.querySelector(".Projectsbtn");
+      const contactBtn = document.querySelector(".Contactbtn");
+      const firmsBtn = document.querySelector(".Firmsbtn");
+      const aboutBtn = document.querySelector(".Aboutbtn");
+      const arrowBtn = document.querySelector(".arrowbtn");
+      const homeBtn = document.querySelector(".HomeBtn");
+      const pageDiv = document.querySelector(".page");
+
+      arrowBtn.addEventListener("click", () => {
+        const navbar = document.querySelector(".navbar");
+        const photo = document.querySelector(".photo");
+
+        navbar.classList.toggle("opened");
+        
+      });
+
+      const redirectTo = (page) => {
+        pageDiv.classList.add("pageCollapsed");
+        setTimeout(() => (window.location.href = page), 500);
+      };
+
+      homeBtn.onclick = () => redirectTo("index.html");
+      clienteleBtn.onclick = () => redirectTo("clientele.html");
+      projectsBtn.onclick = () => redirectTo("projects.html");
+      contactBtn.onclick = () => redirectTo("contact.html");
+      firmsBtn.onclick = () => redirectTo("firms.html");
+      aboutBtn.onclick = () => redirectTo("about.html");
+    </script>
   </body>
 </html>
