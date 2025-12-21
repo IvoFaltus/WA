@@ -146,9 +146,12 @@ body.page-index .photo {
   border-radius: 50%;
   top: 300px;
   left: 60%;
-  background-color: var(--darker-grey);
-}
 
+  background-image: url("img.png");
+  background-size: 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 body.page-index .arrowbtn {
   position: fixed;
   top: 10px;
@@ -512,7 +515,7 @@ body.firms-page .navbar {
 body.firms-page .arrowbtn{
     z-index: 50;
     height: 40px;
-    left: 90%;
+    left: 85%;
   }
   body.firms-page .title{
     position: relative;
@@ -891,7 +894,7 @@ body.contact-page .navbar.opened + .arrowbtn + .page {
 body.contact-page .arrowbtn{
     z-index: 50;
     height: 40px;
-    left: 90%;
+    left: 85%;
   }
 
 
@@ -1182,7 +1185,7 @@ body.about-page .navbar.opened + .arrowbtn + .page {
 body.about-page .arrowbtn{
     z-index: 50;
     height: 40px;
-    left: 90%;
+    left: 85%;
   }
   body.about-page .title{
     position: relative;
@@ -1459,7 +1462,7 @@ body.clientele-page .icon{
   body.clientele-page .arrowbtn {
     position: fixed;
     height: 50px;
-    left: 90%;
+    left: 85%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1684,7 +1687,6 @@ body.projects-page .arrowbtn{
 position: absolute;
 right: 10px;
 top: 10px;
-
 width: 60px;
 height: 40px;
 display: none;
@@ -1726,6 +1728,7 @@ body.projects-page .icon{
     top: 500px;
     height: 400px;
     width: 600px;
+    
   }
   
   body.projects-page .title{
@@ -1763,7 +1766,7 @@ body.projects-page .navbar.opened ~ .page {
     position: fixed;
     z-index: 50;
     height: 40px;
-    left: 90%;
+    left: 85%;
   }
   body.projects-page .title{
     position: relative;
@@ -1785,7 +1788,8 @@ body.projects-page .navbar.opened ~ .page {
   body.projects-page .text1 {
     width: 100%;
     border-radius: 0px;
-    height: 400px;
+    height: 500px;
+
   }
 }
 
