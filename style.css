@@ -753,8 +753,12 @@ body.contact-page .emailLabel {
   font-weight: 600;
 
   position: absolute;
-  top: 485px;
+  top: 515px;
   left: 40px;
+}
+.emailLabel {
+  position: absolute;
+  transform: translateY(-10%);
 }
 
 body.contact-page textarea,
