@@ -822,7 +822,7 @@ body.contact-page .icon{
 }
 @media (max-width: 1530px) {
   body.contact-page form{
-    right: 3%;
+    right: 5%;
   }
   body.contact-page input[type="submit"] {
     right: 80px;
@@ -839,6 +839,8 @@ body.contact-page .icon{
 @media (max-width: 1404px) {
   body.contact-page form{
     width: 500px;
+    transform: translateX(10%);
+    
   }
 
   body.contact-page input[type="submit"] {
@@ -938,7 +940,7 @@ body.contact-page .arrowbtn{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    top: 200px;
+    top: 400px;
   }
 }
 body.contact-page .Contactbtn{
