@@ -5,6 +5,13 @@
   --darker-grey: rgb(212, 212, 212);
   --darkest-grey: rgb(189, 189, 189);
 }
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body::-webkit-scrollbar {
+  display: none;                /* Chrome, Edge, Safari */
+}
 
 body.page-index .page {
   animation: slideIn 0.5s ease-in-out forwards;
@@ -220,6 +227,7 @@ body.page-index .icon {
 }
 
 @media (width <= 800px) {
+  
   body.page-index .navbar {
     width: 100%;
     border-radius: 0;
